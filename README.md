@@ -27,9 +27,9 @@ boilerplate.destroy();
 
 
 ## Team
-| [![Joe Mottershaw](https://avatars1.githubusercontent.com/u/5093255?s=100)](https://github.com/joemottershaw) |
-|:-------------------------------------------------------------------------------------------------------------:|
-| [Joe Mottershaw](https://github.com/joemottershaw)                                                            |
+| [![CloudEight](https://avatars1.githubusercontent.com/u/39433551?s=100)](https://github.com/cloudeight) | [![Joe Mottershaw](https://avatars1.githubusercontent.com/u/5093255?s=100)](https://github.com/joemottershaw) |
+|:-------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------:|
+| [CloudEight](https://github.com/cloudeight)                                                             | [Joe Mottershaw](https://github.com/joemottershaw)                                                            |
 
 Along with the help from these [fine people](https://github.com/cloudeight/github-boilerplate/graphs/contributors)!
 
