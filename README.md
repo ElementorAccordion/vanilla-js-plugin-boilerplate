@@ -1,4 +1,4 @@
-# Vanilla JS Plugin Boilerplate
+# Vanilla JavaScript Plugin Boilerplate
 > *A boilerplate template for developing vanilla JavaScript plugins.*
 <br />
 
