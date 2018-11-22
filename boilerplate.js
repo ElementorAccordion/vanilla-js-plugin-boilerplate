@@ -1,5 +1,3 @@
-'use strict';
-
 /* =============================================================================================
    PLUGIN
    ============================================================================================= */
@@ -25,7 +23,7 @@
 
     // Set the plugin defaults
     const defaults = {
-        propertyName: 'Default Value'
+        property: 'Value'
     };
 
     /**
@@ -35,11 +33,10 @@
      * @return {void}
      */
     function Plugin(options, element) {
-        // Set the plugin instance, name, elements, default settings, user options and extended settings
+        // Set the plugin instance, name, element, default settings, user options and extended settings
         plugin.this = this;
         plugin.name = pluginName;
         plugin.element = element;
-        plugin.$element = document.querySelectorAll(plugin.element);
         plugin.defaults = defaults;
         plugin.options = options;
         plugin.settings = extendDefaults(defaults, options);
