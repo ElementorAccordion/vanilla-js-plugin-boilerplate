@@ -65,13 +65,13 @@
          return defaults;
      };
 
-     /**
-      * An example of a private method
-      * @return {void}
-      */
-     const privateMethod = () => {
-         // Your private method code here...
-     }
+    /**
+     * An example of a private method
+     * @return {void}
+     */
+    const privateMethod = () => {
+        // Your private method code here...
+    }
 
     /**
      * Public variables and methods
