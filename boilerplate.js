@@ -53,17 +53,17 @@
      */
     const extendDefaults = (defaults, options) => {
         // Cycle through the user options
-         for (let property in options) {
-             // Check if the property exists in the user options
-             if (options.hasOwnProperty(property)) {
-                 // Set the property key value in the defaults object with the options property key value
-                 defaults[property] = options[property];
-             }
-         }
+        for (let property in options) {
+            // Check if the property exists in the user options
+            if (options.hasOwnProperty(property)) {
+                // Set the property key value in the defaults object with the options property key value
+                defaults[property] = options[property];
+            }
+        }
 
-         // Return the extended plugin settings
-         return defaults;
-     };
+        // Return the extended plugin settings
+        return defaults;
+    };
 
     /**
      * An example of a private method
