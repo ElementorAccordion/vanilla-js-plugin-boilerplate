@@ -13,9 +13,9 @@
 ## Instantiate
 ``` javascript
 // Create a new instance of the plugin
-var boilerplate = new Boilerplate({
+var boilerplate = new Boilerplate('.selector', {
     property: 'New Value'
-}, '.selector');
+});
 
 // Call a public method
 boilerplate.publicMethod();

@@ -28,11 +28,11 @@
 
     /**
      * Constructor
+     * @param  {element}  element  The selector element(s)
      * @param  {object}   options  The plugin options
-     * @param  {element}  element  The initialized element
      * @return {void}
      */
-    function Plugin(options, element) {
+    function Plugin(element, options) {
         // Set the plugin instance, name, element, default settings, user options and extended settings
         plugin.this = this;
         plugin.name = pluginName;
