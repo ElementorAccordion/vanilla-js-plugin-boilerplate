@@ -23,6 +23,12 @@
 
     // Set the plugin defaults
     const defaults = {
+        callbackInitializeBefore: () => {},
+        callbackInitializeAfter: () => {},
+        callbackRefreshBefore: () => {},
+        callbackRefreshAfter: () => {},
+        callbackDestroyBefore: () => {},
+        callbackDestroyAfter: () => {},
         property: 'Value'
     };
 
@@ -80,13 +86,26 @@
     Plugin.prototype = {
         /**
          * Initialize the plugin
+         * @param  {bool}  silent  Suppress callbacks
          * @return {void}
          */
-        initialize: () => {
-            // Destroy the existing initialization
-            plugin.this.destroy();
+        initialize: (silent = false) => {
+            // Destroy the existing initialization silently
+            plugin.this.destroySilent();
+
+            // Check if the callbacks should not be suppressed
+            if (!silent) {
+                // Call the initialize before callback
+                plugin.settings.callbackInitializeBefore.call();
+            }
 
             // Initialize the plugin here...
+
+            // Check if the callbacks should not be suppressed
+            if (!silent) {
+                // Call the initialize after callback
+                plugin.settings.callbackInitializeAfter.call();
+            }
         },
 
         /**
@@ -99,22 +118,66 @@
 
         /**
          * Refresh the plugin by destroying an existing initialization and initializing again
+         * @param  {bool}  silent  Suppress callbacks
          * @return {void}
          */
-        refresh: () => {
+        refresh: (silent = false) => {
+            // Check if the callbacks should not be suppressed
+            if (!silent) {
+                // Call the refresh before callback
+                plugin.settings.callbackRefreshBefore.call();
+            }
+
             // Destroy the existing initialization
-            plugin.this.destroy();
+            plugin.this.destroy(silent);
 
             // Initialize the plugin
-            plugin.this.initialize();
+            plugin.this.initialize(silent);
+
+            // Check if the callbacks should not be suppressed
+            if (!silent) {
+                // Call the refresh after callback
+                plugin.settings.callbackRefreshAfter.call();
+            }
         },
 
         /**
          * Destroy an existing initialization
+         * @param  {bool}  silent  Suppress callbacks
          * @return {void}
          */
-        destroy: () => {
-            // Remove anything set by the initialization method here
+        destroy: (silent = false) => {
+            // Check if the callbacks should not be suppressed
+            if (!silent) {
+                // Call the destroy before callback
+                plugin.settings.callbackDestroyBefore.call();
+            }
+
+            // Remove anything set by the initialization method here...
+
+            // Check if the callbacks should not be suppressed
+            if (!silent) {
+                // Call the destroy after callback
+                plugin.settings.callbackDestroyAfter.call();
+            }
+        },
+
+        /**
+         * Call the refresh method silently
+         * @return {void}
+         */
+        refreshSilently: () => {
+            // Call the refresh method silently
+            plugin.this.refresh(true);
+        },
+
+        /**
+         * Call the destroy method silently
+         * @return {void}
+         */
+        destroySilently: () => {
+            // Call the destroy method silently
+            plugin.this.destroy(true);
         }
     };
 
