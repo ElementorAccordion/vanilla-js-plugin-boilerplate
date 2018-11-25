@@ -1,7 +1,22 @@
+# November 25, 2018
+
+### New
+- Added initialize before and after callback options
+- Added refresh before and after callback options
+- Added destroy before and after callback options
+- Added refresh public method
+- Added refreshSilently public method
+- Added destroy public method
+- Added destroySilently public method
+
+
+-----
+
+
 # November 24, 2018
 
 ### Updated
-- Update plugin argument order
+- Updated plugin argument order
 
 
 -----
@@ -10,8 +25,10 @@
 # November 22, 2018
 
 ### Updated
-- Update defaults
-- Remove plugin.$element
+- Updated defaults
+
+### Removed
+- Removed plugin.$element variable
 
 
 -----
