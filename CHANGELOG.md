@@ -3,6 +3,9 @@
 ### Updated
 - Updated with [cloudeight style guidelines](https://github.com/cloudeight/style-guidelines)
 
+### Fixed
+- Fixed incorrect destroy silently method call in initialization method
+
 
 -----
 
