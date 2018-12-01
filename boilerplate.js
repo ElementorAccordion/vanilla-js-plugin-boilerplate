@@ -91,7 +91,7 @@
          */
         initialize: (silent = false) => {
             // Destroy the existing initialization silently
-            plugin.this.destroySilent();
+            plugin.this.destroySilently();
 
             // Check if the callbacks should not be suppressed
             if (!silent) {
