@@ -1,3 +1,12 @@
+# December 1, 2018
+
+### Updated
+- Updated with [cloudeight style guidelines](https://github.com/cloudeight/style-guidelines)
+
+
+-----
+
+
 # November 25, 2018
 
 ### New
