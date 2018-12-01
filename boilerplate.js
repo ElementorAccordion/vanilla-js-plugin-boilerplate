@@ -77,7 +77,7 @@
      */
     const privateMethod = () => {
         // Your private method code here...
-    }
+    };
 
     /**
      * Public variables and methods.
