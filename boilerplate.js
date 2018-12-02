@@ -4,17 +4,17 @@
 
 ;(function (root, factory) {
     // Set the plugin name
-    const pluginName = 'Boilerplate';
+    const plugin_name = 'Boilerplate';
 
     // Check if instantiation should be via` amd, commonjs or the browser`
     if (typeof define === 'function' && define.amd) {
-        define([], factory(pluginName));
+        define([], factory(plugin_name));
     } else if (typeof exports === 'object') {
-        module.exports = factory(pluginName);
+        module.exports = factory(plugin_name);
     } else {
-        root[pluginName] = factory(pluginName);
+        root[plugin_name] = factory(plugin_name);
     }
-}((window || module || {}), function(pluginName) {
+}((window || module || {}), function(plugin_name) {
     // Use strict mode
     'use strict';
 
@@ -41,7 +41,7 @@
     function Plugin(element, options) {
         // Set the plugin object
         plugin.this = this;
-        plugin.name = pluginName;
+        plugin.name = plugin_name;
         plugin.element = element;
         plugin.defaults = defaults;
         plugin.options = options;
