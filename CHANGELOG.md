@@ -1,7 +1,7 @@
 # December 2, 2018
 
 ### Updated
-- Updated with [cloudeight style guidelines](https://github.com/cloudeight/style-guidelines)
+- Updated with [style guidelines](https://github.com/joemottershaw/style-guidelines)
 
 
 -----
@@ -10,7 +10,7 @@
 # December 1, 2018
 
 ### Updated
-- Updated with [cloudeight style guidelines](https://github.com/cloudeight/style-guidelines)
+- Updated with [style guidelines](https://github.com/joemottershaw/style-guidelines)
 
 ### Fixed
 - Fixed incorrect destroy silently method call in initialization method
