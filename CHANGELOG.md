@@ -1,3 +1,16 @@
+# August 8, 2019
+
+### Updated
+- Updated default declaration order
+- Updated plugin.settings
+    - Added Object.assign for merging defaults
+    - Removed extendDefaults private method (now Object.assign)
+- Updated comments
+
+
+-----
+
+
 # December 2, 2018
 
 ### Updated
