@@ -6,7 +6,7 @@
     // Set the plugin name
     const plugin_name = 'Boilerplate';
 
-    // Check if instantiation should be via` amd, commonjs or the browser`
+    // Universal module definition (amd, commonjs, browser)
     if (typeof define === 'function' && define.amd) {
         define([], factory(plugin_name));
     } else if (typeof exports === 'object') {
@@ -23,13 +23,14 @@
 
     // Set the plugin defaults
     const defaults = {
-        callbackInitializeBefore: () => {},
-        callbackInitializeAfter: () => {},
-        callbackRefreshBefore: () => {},
-        callbackRefreshAfter: () => {},
-        callbackDestroyBefore: () => {},
-        callbackDestroyAfter: () => {},
-        property: 'Value'
+        property: 'Initialized',
+
+        callbackInitializeBefore: () => { console.log('callbackInitializeBefore'); },
+        callbackInitializeAfter: () => { console.log('callbackInitializeAfter'); },
+        callbackRefreshBefore: () => { console.log('callbackRefreshBefore'); },
+        callbackRefreshAfter: () => { console.log('callbackRefreshAfter'); },
+        callbackDestroyBefore: () => { console.log('callbackDestroyBefore'); },
+        callbackDestroyAfter: () => { console.log('callbackDestroyAfter'); }
     };
 
     /**
@@ -45,31 +46,11 @@
         plugin.element = element;
         plugin.defaults = defaults;
         plugin.options = options;
-        plugin.settings = extendDefaults(defaults, options);
+        plugin.settings = Object.assign({}, defaults, options);
 
         // Initialize the plugin
         plugin.this.initialize();
     }
-
-    /**
-     * Merge the default plugin settings with the user options.
-     * @param  {object}  defaults  The default plugin settings.
-     * @param  {object}  options   The user options.
-     * @return {object}            The extended plugin settings.
-     */
-    const extendDefaults = (defaults, options) => {
-        // Cycle through the user options
-        for (let property in options) {
-            // Check if the property exists in the user options
-            if (options.hasOwnProperty(property)) {
-                // Set the defaults property to the options property
-                defaults[property] = options[property];
-            }
-        }
-
-        // Return the extended plugin settings
-        return defaults;
-    };
 
     /**
      * An example of a private method.
